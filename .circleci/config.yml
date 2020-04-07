@@ -6,5 +6,4 @@ jobs:
       - image: centos:latest
     steps:
       - checkout
-      - command: yum install -y python
-      - run: python pythontest.py
+      - run: echo 'Hello World'
