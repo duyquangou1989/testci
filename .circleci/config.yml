@@ -1,18 +1,10 @@
 # Top of file
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.11.1
-    working_directory: /go/src/github.com/Static-Void-Academy/circleci-hello
+      - image: centos
     steps:
-      - checkout # Checks out the source code
-      - run: go get -d ./...
-      - run:
-          name: Build the executable
-          command: |
-            echo "Other important command here as example"
-            echo 'build and excute'
-      #- store_artifacts:
-      #    #path: ./circleci-hello # executable
-       #   command: echo 'executable'
+      - checkout
+      - command: yum install -y python
+      - run: python pythontest.py
