@@ -6,4 +6,11 @@ jobs:
     working_directory: /go/src/github.com/Static-Void-Academy/circleci-hello
     steps:
       - checkout
-      - run: echo 'Hello World'
+      - run: go get -d ./...
+      - run:
+          name: Build the excutable
+          command: |
+            echo "Other command here as example"
+            go build
+      - store_artifacts:
+          path: ./circleci-hello
