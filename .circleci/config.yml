@@ -15,7 +15,7 @@ jobs:
           name: Running tests
           command: |
             . venv/bin/active
-            cd messageboard && python3 manage.py tests
+            python3 messageboard/manage.py test
       - store_artifacts:
           path: test-reports/
           destination: python_app
