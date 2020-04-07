@@ -1,3 +1,4 @@
+# Top of file
 version: 2
 jobs:
   build:
@@ -5,12 +6,12 @@ jobs:
       - image: circleci/golang:1.11.1
     working_directory: /go/src/github.com/Static-Void-Academy/circleci-hello
     steps:
-      - checkout
+      - checkout # Checks out the source code
       - run: go get -d ./...
       - run:
-          name: Build the excutable
+          name: Build the executable
           command: |
-            echo "Other command here as example"
+            echo "Other important command here as example"
             go build
       - store_artifacts:
-          path: ./circleci-hello
+          path: ./circleci-hello # executable
