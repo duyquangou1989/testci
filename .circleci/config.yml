@@ -16,6 +16,6 @@ jobs:
           command: |
             . venv/bin/active
             python3 messageboard/manage.py test
-      - store_artifacts:
-          path: test-reports/
-          destination: python_app
+      #- store_artifacts:
+      #    path: test-reports/
+      #    destination: python_app
