@@ -12,7 +12,7 @@ jobs:
           name: Build the executable
           command: |
             echo "Other important command here as example"
-            echo 'build'
-      - store_artifacts:
-          #path: ./circleci-hello # executable
-          command: echo 'executable'
+            echo 'build and excute'
+      #- store_artifacts:
+      #    #path: ./circleci-hello # executable
+       #   command: echo 'executable'
