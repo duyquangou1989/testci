@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: centos:latest
+      - image: icydream/centos7.7:latest
     steps:
       - checkout
-      - run: yum install python && python pythontest.py && echo 'Hello World'
+      - run: yum install -y python && python pythontest.py && echo 'Hello World'
