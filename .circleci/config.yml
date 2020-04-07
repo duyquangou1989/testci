@@ -6,7 +6,7 @@ jobs:
     working_directory: /go/src/github.com/Static-Void-Academy/circleci-hello
     steps:
       - checkout
-      - run: go get -d ./ ...
+      - run: go get -d ./...
       - run:
           name: Build the excutable
           command: |
