@@ -6,4 +6,4 @@ jobs:
       - image: icydream/centos7.7:latest
     steps:
       - checkout
-      - run: yum install -y python && python pythontest.py && echo 'Hello World'
+      - run: yum install -y python && pwd && ls -l && python pythontest.py
